@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<script>
+    function changeInp(a) {
+        if(a=="="){            document.getElementById("inp").innerHTML = eval(document.getElementById("inp").innerHTML)
+        }
+    else if(a=="AC"){
+        document.getElementById("inp").innerHTML="";
+    }
+    else if (a == "back") {
+    let current = document.getElementById("inp").innerHTML;
+    document.getElementById("inp").innerHTML = current.slice(0, -1);
+}
+        else{
+            document.getElementById("inp").innerHTML+=a;
+        }
+
+
+    }
+
+
+</script>
+
+<body style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   background-color: lightgreen; ">
+    <div style="height: 70vh; width: 30vw; background-color: grey; border: 5px solid black; margin-top: 60px;">
+
+        <!-- input -->
+
+        <div id="inp" style="height: 27%; width: 100%; background-color: white; font-size:x-large ;">
+            <!-- <input type="text" name=""  style="height: 100%; width: 98%" /> -->
+        </div>
+        
+
+        <div style="height: 13%; width: 100%;  display: flex;
+    align-items: center;
+    justify-content: center; gap: 50px;margin-top: 1px;">
+            <button onclick="changeInp('AC')" style="height: 80%; width: 13% ;border-radius: 100px;  display: flex;
+            align-items: center;
+            justify-content: center;font-size: x-large; background-color: rgb(241, 152, 152); ">AC</button>
+            <button onclick="changeInp('back')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+            align-items: center;
+            justify-content: center;font-size: x-large;background-color: rgb(241, 152, 152);"class="material-icons">&#xe14a;</button>
+            <button onclick="changeInp('+/-')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+            align-items: center;
+            justify-content: center;font-size: x-large;background-color: rgb(241, 152, 152);">+/-</button>
+            <button onclick="changeInp('/')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+            align-items: center;
+            justify-content: center;font-size: xx-large;background-color: rgb(241, 152, 152);">&#xF7;  </button>
+        </div>
+        <div style="height: 13%; width: 100%;  display: flex;
+        align-items: center;
+        justify-content: center; gap: 50px;margin-top: 5px;">
+                <button onclick="changeInp('7')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                align-items: center;
+                justify-content: center;font-size: x-large;">7</button>
+                <button onclick="changeInp('8')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                align-items: center;
+                justify-content: center;font-size: x-large;">8</button>
+                <button onclick="changeInp('9')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                align-items: center;
+                justify-content: center;font-size: x-large;">9</button>
+                <button onclick="changeInp('*')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                align-items: center;
+                justify-content: center;font-size: x-large;background-color: rgb(241, 152, 152);">X</button>
+            </div>
+            <div style="height: 13%; width: 100%;  display: flex;
+            align-items: center;
+            justify-content: center; gap: 50px;margin-top: 5px;">
+                    <button  onclick="changeInp('4')" style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                    align-items: center;
+                    justify-content: center;font-size: x-large;">4</button>
+                    <button onclick="changeInp('5')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                    align-items: center;
+                    justify-content: center;font-size: x-large;">5</button>
+                    <button onclick="changeInp('6')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                    align-items: center;
+                    justify-content: center;font-size: x-large;">6</button>
+                    <button onclick="changeInp('-')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                    align-items: center;
+                    justify-content: center;font-size: xx-large;background-color: rgb(241, 152, 152);">-</button>
+                </div>
+                <div style="height: 13%; width: 100%;  display: flex;
+                align-items: center;
+                justify-content: center; gap: 50px;margin-top: 5px;">
+                        <button onclick="changeInp('1')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                        align-items: center;
+                        justify-content: center;font-size: x-large;">1</button>
+                        <button onclick="changeInp('2')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                        align-items: center;
+                        justify-content: center;font-size: x-large;">2</button>
+                        <button onclick="changeInp('3')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                        align-items: center;
+                        justify-content: center;font-size: x-large;">3</button>
+                        <button onclick="changeInp('+')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                        align-items: center;
+                        justify-content: center;font-size: x-large;background-color: rgb(241, 152, 152);">+</button>
+                    </div>
+                    <div style="height: 13%; width: 100%;  display: flex;
+                    align-items: center;
+                    justify-content: center; gap: 50px;margin-top: 5px;">
+                            <button onclick="changeInp('%')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                            align-items: center;
+                            justify-content: center; font-size: x-large;">%</button>
+                            <button onclick="changeInp('0')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                            align-items: center;
+                            justify-content: center;font-size: x-large;">0</button>
+                            <button onclick="changeInp('.')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                            align-items: center;
+                            justify-content: center;font-size: x-large;">.</button>
+                            <button onclick="changeInp('=')"  style="height: 80%; width: 13% ;border-radius: 100px; display: flex;
+                            align-items: center;
+                            justify-content: center;font-size: x-large;background-color: rgb(131, 230, 131);">=</button>
+                        </div>
+                    
+
+    </div>
+</body>
+
+</html>
